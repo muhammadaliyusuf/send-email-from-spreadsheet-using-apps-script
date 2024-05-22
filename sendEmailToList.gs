@@ -8,7 +8,6 @@ function sendEmails() {
     const emailAddress = row[0];
     const participantsName = row[1];
     const subject = `Online Group Chat Invitation | Google Cloud Arcade Facilitator Program`;
-    const name = "Google Cloud Arcade Facilitator"
 
     console.log(`Row ${i + 2}: ${participantsName}, ${emailAddress}`); // Logging the data
 
@@ -52,7 +51,7 @@ Your Google Cloud Arcade Facilitators</p>
         to: emailAddress, 
         subject: subject,
         htmlBody: body,
-        name: name
+        name: "Google Cloud Arcade Facilitator"
         });
       console.log(`Row ${i + 2}: Email sent to ${emailAddress}`);
     } catch (error) {
